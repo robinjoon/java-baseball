@@ -1,16 +1,8 @@
 package baseball.domain;
 
 public enum RestartType {
-    RESTART("재시작"), END("종료");
-    private final String description;
-
-    RestartType(String description) {
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
+    RESTART,
+    END;
 
     public static RestartType fromInt(int number){
         if(number == 1){
