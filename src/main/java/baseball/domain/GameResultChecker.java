@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class GameResultChecker {
+class GameResultChecker {
     private final int[] answerArray;
     private static final int ARRAY_SIZE = 3;
 

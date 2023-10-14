@@ -1,6 +1,6 @@
 package baseball.domain;
 
-public enum GameResultType{
+enum GameResultType{
     NOT_THING,
     BALL,
     STRIKE,
