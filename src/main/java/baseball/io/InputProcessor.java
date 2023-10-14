@@ -10,7 +10,11 @@ public class InputProcessor {
         this.inputValidator = inputValidator;
     }
 
-    public int get3DigitsNumber(String userInput){
+    public int get3DigitsNumber(){
+        return get3DigitsNumber(Console.readLine());
+    }
+
+    int get3DigitsNumber(String userInput){
         int number;
         try {
             number = Integer.parseInt(userInput);
@@ -21,7 +25,12 @@ public class InputProcessor {
         inputValidator.validateNonIncludeZero(number);
         return number;
     }
-    public RestartType getRestartInput(String userInput){
+
+    public RestartType getRestartInput(){
+        return getRestartInput(Console.readLine());
+    }
+
+    RestartType getRestartInput(String userInput){
         try {
             int number = Integer.parseInt(userInput);
             return RestartType.fromInt(number);
