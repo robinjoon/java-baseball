@@ -11,15 +11,15 @@ class GameResult {
         this.strikeCount = strikeCount;
     }
 
-    public int getBallCount() {
+    int getBallCount() {
         return ballCount;
     }
 
-    public int getStrikeCount() {
+    int getStrikeCount() {
         return strikeCount;
     }
 
-    public GameResultType getResultType(){
+    GameResultType getResultType(){
         if(ballCount == 0 && strikeCount == 0){
             return NOT_THING;
         }

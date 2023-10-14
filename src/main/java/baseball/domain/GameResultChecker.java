@@ -9,14 +9,14 @@ class GameResultChecker {
     private final int[] answerArray;
     private static final int ARRAY_SIZE = 3;
 
-    public GameResultChecker(int answer) {
+    GameResultChecker(int answer) {
         answerArray = new int[ARRAY_SIZE];
         answerArray[0] = answer / 100;
         answerArray[1] = (answer % 100) / 10;
         answerArray[2] = (answer % 100) % 10;
     }
 
-    public GameResult gameResult(int userInput){
+    GameResult gameResult(int userInput){
         int[] userInputArray = new int[ARRAY_SIZE];
         userInputArray[0] = userInput / 100;
         userInputArray[1] = (userInput % 100) / 10;
