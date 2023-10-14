@@ -1,6 +1,6 @@
 package baseball.io;
 
-class InputValidator {
+public class InputValidator {
     void validate3Digits(int number){
         if(number >= 100 && number <= 999){
             return;
