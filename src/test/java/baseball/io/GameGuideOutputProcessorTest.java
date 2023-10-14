@@ -1,7 +1,6 @@
 package baseball.io;
 
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,9 +9,9 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OutputProcessorTest {
+class GameGuideOutputProcessorTest {
 
-    private final OutputProcessor outputProcessor = new OutputProcessor();
+    private final GameGuideOutputProcessor gameGuideOutputProcessor = new GameGuideOutputProcessor();
 
     final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     final PrintStream standardOut = System.out;
@@ -28,19 +27,19 @@ class OutputProcessorTest {
     }
     @Test
     void printGameStart() {
-        outputProcessor.printGameStart();
+        gameGuideOutputProcessor.printGameStart();
         assertEquals("숫자 야구 게임을 시작합니다.", outputStreamCaptor.toString().trim());
     }
 
     @Test
     void printInput3DigitsNumberGuide() {
-        outputProcessor.printInput3DigitsNumberGuide();
+        gameGuideOutputProcessor.printInput3DigitsNumberGuide();
         assertEquals("숫자를 입력해주세요 : ", outputStreamCaptor.toString());
     }
 
     @Test
     void printRestartGuide() {
-        outputProcessor.printRestartGuide();
+        gameGuideOutputProcessor.printRestartGuide();
         assertEquals("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.", outputStreamCaptor.toString().trim());
     }
 }
